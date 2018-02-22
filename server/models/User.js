@@ -13,6 +13,8 @@ const userSchema = new Schema({
     required: true,
     minlength: [8, 'Password must be 8 at least characters']
   },
+  createdAt: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, default: false },
 });
 
 //Write some encryption here
